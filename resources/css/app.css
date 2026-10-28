@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* MEDCARE brand palette (diambil dari desain Figma) */
+    --color-medcare-bg: #c9f0f2;
+    --color-medcare-panel: #ddf3f9;
+    --color-medcare: #00c0e8;
+    --color-medcare-hover: #00aed2;
+    --color-medcare-dark: #00a9cc;
+    --color-medcare-muted: #b3b3b3;
+    --color-medcare-label: #4f4f4f;
+    --color-medcare-border: #e3e3e3;
+    --color-medcare-check: #6750a4;
+}
