@@ -7,6 +7,7 @@
     'icon' => 'mail',
     'autocomplete' => 'off',
     'value' => null,
+    'required' => false,
 ])
 
 <div {{ $attributes->merge(['class' => 'w-full']) }}>
@@ -30,7 +31,17 @@
             @if (! is_null($value)) value="{{ $value }}" @endif
             placeholder="{{ $placeholder }}"
             autocomplete="{{ $autocomplete }}"
-            class="h-10 w-full rounded-[8px] border border-medcare-border bg-white pl-[58px] pr-3 text-[12px] font-normal text-[#404040] outline-none transition placeholder:font-normal placeholder:text-medcare-muted focus:border-medcare focus:ring-2 focus:ring-medcare/25"
+            @if ($required)
+                required
+                aria-required="true"
+                aria-describedby="{{ $name }}-error"
+                data-required-message="{{ $label }} wajib diisi"
+            @endif
+            class="auth-input h-10 w-full rounded-[8px] border border-medcare-border bg-white pl-[58px] pr-3 text-[12px] font-normal text-[#404040] outline-none transition placeholder:font-normal placeholder:text-medcare-muted focus:border-medcare focus:ring-2 focus:ring-medcare/25"
         >
     </div>
+
+    @if ($required)
+        <p id="{{ $name }}-error" data-error-for="{{ $name }}" class="auth-error" hidden></p>
+    @endif
 </div>

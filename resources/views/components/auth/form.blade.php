@@ -19,7 +19,8 @@
         <p class="mt-[10px] max-w-[250px] text-[11px] font-normal leading-[19px] text-medcare-muted">{{ $subtitle }}</p>
     @endif
 
-    <form class="mt-[15px]" novalidate>
+    {{-- novalidate: validasi ditangani app.js supaya pesannya sesuai desain --}}
+    <form class="mt-[15px]" data-auth-form novalidate>
         <div class="space-y-[14px]">
             <x-auth.field
                 :label="$emailLabel"
@@ -28,6 +29,7 @@
                 placeholder="Masukkan email atau nomor telepon"
                 icon="mail"
                 autocomplete="username"
+                :required="true"
             />
 
             <x-auth.field
@@ -37,6 +39,7 @@
                 placeholder="Masukkan password"
                 icon="lock"
                 autocomplete="current-password"
+                :required="true"
             />
         </div>
 

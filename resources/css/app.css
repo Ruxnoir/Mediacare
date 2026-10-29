@@ -17,4 +17,25 @@
     --color-medcare-label: #4f4f4f;
     --color-medcare-border: #e3e3e3;
     --color-medcare-check: #6750a4;
+    --color-medcare-error: #e5484d;
+}
+
+/*
+ * Validasi form login. Ditulis tanpa @layer (bukan utility Tailwind) agar
+ * tetap menang atas class border/ring bawaan input saat field tidak valid.
+ */
+.auth-error {
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--color-medcare-error);
+}
+
+.auth-input[aria-invalid='true'] {
+    border-color: var(--color-medcare-error);
+}
+
+.auth-input[aria-invalid='true']:focus {
+    --tw-ring-color: color-mix(in srgb, var(--color-medcare-error) 25%, transparent);
+    border-color: var(--color-medcare-error);
 }
