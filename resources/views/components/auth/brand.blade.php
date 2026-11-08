@@ -3,9 +3,9 @@
     {{ $attributes->merge([
         'src' => asset('images/medcare/logo-medcare.png'),
         'alt' => 'MediaCare — Kesehatan Anda, Prioritas Kami',
-        'width' => 2226,
-        'height' => 554,
+        'width' => 2392,
+        'height' => 608,
         'draggable' => 'false',
-        'class' => 'w-[220px] select-none',
+        'class' => 'w-[280px] select-none',
     ]) }}
 >
