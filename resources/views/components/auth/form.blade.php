@@ -52,7 +52,7 @@
             Masuk
         </button>
 
-        <x-auth.divider class="mt-[26px]">{{ $showGoogle ? 'atau' : 'MEDCARE' }}</x-auth.divider>
+        <x-auth.divider class="mt-[26px]">{{ $showGoogle ? 'atau' : 'MEDIACARE' }}</x-auth.divider>
 
         @if ($showGoogle)
             {{-- Ikon + label di-center sebagai satu kesatuan --}}

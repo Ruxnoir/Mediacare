@@ -1,4 +1,4 @@
-@props(['title' => 'MEDCARE', 'current' => 'pasien'])
+@props(['title' => 'MEDIACARE', 'current' => 'pasien'])
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

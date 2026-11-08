@@ -1,11 +1,11 @@
-{{-- Logo MEDCARE (mark + wordmark + tagline) diambil dari desain Figma --}}
+{{-- Logo MediaCare (mark + wordmark + tagline) diekspor dari desain Figma, padding transparan sudah di-trim --}}
 <img
     {{ $attributes->merge([
         'src' => asset('images/medcare/logo-medcare.png'),
-        'alt' => 'MEDCARE — Kesehatan Anda, Prioritas Kami',
-        'width' => 115,
-        'height' => 115,
+        'alt' => 'MediaCare — Kesehatan Anda, Prioritas Kami',
+        'width' => 2226,
+        'height' => 554,
         'draggable' => 'false',
-        'class' => 'w-[115px] select-none',
+        'class' => 'w-[220px] select-none',
     ]) }}
 >
