@@ -7,17 +7,24 @@
     --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 
-    /* MEDCARE brand palette (diambil dari desain Figma) */
-    --color-medcare-bg: #c9f0f2;
-    --color-medcare-panel: #ddf3f9;
-    --color-medcare: #00c0e8;
-    --color-medcare-hover: #00aed2;
-    --color-medcare-dark: #00a9cc;
-    --color-medcare-muted: #b3b3b3;
-    --color-medcare-label: #4f4f4f;
-    --color-medcare-border: #e3e3e3;
-    --color-medcare-check: #6750a4;
-    --color-medcare-error: #e5484d;
+    /* MediaCat palette (diambil dari desain Figma) */
+    --color-mediacat-bg: #c9f0f2;
+    --color-mediacat-blob: #8fd4fe;
+    --color-mediacat-plus: #a2ccfe;
+    --color-mediacat-panel: #effbff;
+    --color-mediacat-panel-admin: #ddf2f8;
+    --color-mediacat-panel-dokter: #f5f8fb;
+    --color-mediacat: #00c0e8;
+    --color-mediacat-hover: #00aed2;
+    --color-mediacat-dark: #008fae;
+    --color-mediacat-body: #06b8c4;
+    --color-mediacat-desc: #259299;
+    --color-mediacat-muted: #b3b3b3;
+    --color-mediacat-faint: #cdcdcd;
+    --color-mediacat-label: #636363;
+    --color-mediacat-border: #e5e3e3;
+    --color-mediacat-check: #6750a4;
+    --color-mediacat-error: #e5484d;
 }
 
 /*
@@ -28,14 +35,14 @@
     margin-top: 4px;
     font-size: 11px;
     line-height: 15px;
-    color: var(--color-medcare-error);
+    color: var(--color-mediacat-error);
 }
 
 .auth-input[aria-invalid='true'] {
-    border-color: var(--color-medcare-error);
+    border-color: var(--color-mediacat-error);
 }
 
 .auth-input[aria-invalid='true']:focus {
-    --tw-ring-color: color-mix(in srgb, var(--color-medcare-error) 25%, transparent);
-    border-color: var(--color-medcare-error);
+    --tw-ring-color: color-mix(in srgb, var(--color-mediacat-error) 25%, transparent);
+    border-color: var(--color-mediacat-error);
 }

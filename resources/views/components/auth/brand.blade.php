@@ -1,11 +1,11 @@
-{{-- Logo MediaCare (mark + wordmark + tagline) diekspor dari desain Figma, padding transparan sudah di-trim --}}
+{{-- Logo MediaCat (mark kucing + wordmark + paw), diekspor dari desain Figma --}}
 <img
     {{ $attributes->merge([
-        'src' => asset('images/medcare/logo-medcare.png'),
-        'alt' => 'MediaCare — Kesehatan Anda, Prioritas Kami',
-        'width' => 2392,
-        'height' => 608,
+        'src' => asset('images/mediacat/logo-mediacat.png'),
+        'alt' => 'MediaCat',
+        'width' => 612,
+        'height' => 408,
         'draggable' => 'false',
-        'class' => 'w-[280px] select-none',
+        'class' => 'w-[263px] select-none',
     ]) }}
 >

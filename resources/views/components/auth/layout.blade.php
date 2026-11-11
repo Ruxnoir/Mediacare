@@ -1,4 +1,13 @@
-@props(['title' => 'MEDIACARE', 'current' => 'pasien'])
+@props(['title' => 'MediaCat', 'current' => 'pasien', 'panel' => 'pasien', 'decoration' => 'pasien'])
+
+@php
+    // Warna panel berbeda tiap frame di desain Figma.
+    $panelClasses = [
+        'pasien' => 'bg-mediacat-panel',
+        'admin' => 'bg-mediacat-panel-admin',
+        'dokter' => 'bg-mediacat-panel-dokter',
+    ][$panel] ?? 'bg-mediacat-panel';
+@endphp
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -12,11 +21,17 @@
         @fonts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="min-h-screen bg-medcare-bg font-sans text-medcare-label antialiased">
+    <body class="min-h-screen bg-mediacat-bg font-sans text-mediacat-label antialiased">
         <x-auth.background />
 
+        {{--
+            Panel utama. Di layar besar ukurannya dipatok 1069x674 seperti frame
+            Figma 1440x1024, lalu tiap bagian di posisikan absolut dari panel.
+        --}}
         <main class="relative flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
-            <section class="w-full max-w-[1070px] rounded-[20px] bg-medcare-panel px-6 py-8 sm:px-10 lg:min-h-[674px] lg:px-16">
+            <section class="relative flex w-full max-w-[1069px] flex-col items-center gap-6 rounded-[20px] px-6 py-8 sm:px-10 lg:block lg:h-[674px] lg:px-0 lg:py-0 {{ $panelClasses }}">
+                <x-auth.decorations :variant="$decoration" />
+
                 {{ $slot }}
             </section>
         </main>

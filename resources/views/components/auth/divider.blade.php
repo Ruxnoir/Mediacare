@@ -1,6 +1,6 @@
-{{-- Garis pemisah dengan label di tengah --}}
-<div {{ $attributes->merge(['class' => 'flex items-center gap-4']) }}>
-    <span class="h-px flex-1 bg-[#dedede]"></span>
-    <span class="text-[12px] font-normal leading-none text-medcare-muted">{{ $slot }}</span>
-    <span class="h-px flex-1 bg-[#dedede]"></span>
+{{-- Garis pemisah dengan label di tengah (melebar 20px keluar padding kartu, sesuai desain) --}}
+<div {{ $attributes->merge(['class' => '-mx-[20px] flex h-5 items-center gap-[16px]']) }}>
+    <span class="h-px flex-1 bg-mediacat-muted"></span>
+    <span class="text-[12px] font-normal leading-none text-mediacat-faint">{{ $slot }}</span>
+    <span class="h-px flex-1 bg-mediacat-muted"></span>
 </div>

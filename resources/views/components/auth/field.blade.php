@@ -11,16 +11,16 @@
 ])
 
 <div {{ $attributes->merge(['class' => 'w-full']) }}>
-    <label for="{{ $name }}" class="mb-1 block text-[12px] font-normal leading-[18px] text-medcare-label">
+    <label for="{{ $name }}" class="mb-[7px] block text-[12px] font-normal leading-[18px] text-mediacat-label">
         {{ $label }}
     </label>
 
     <div class="relative">
-        <span class="pointer-events-none absolute inset-y-0 left-4 flex items-center text-[#c6c6c6]">
+        <span class="pointer-events-none absolute inset-y-0 left-[16px] flex items-center text-mediacat-faint">
             @if ($icon === 'lock')
-                <x-icons.lock class="size-[18px]" />
+                <x-icons.lock class="size-[24px]" />
             @else
-                <x-icons.mail class="size-[18px]" />
+                <x-icons.mail class="size-[24px]" />
             @endif
         </span>
 
@@ -37,7 +37,7 @@
                 aria-describedby="{{ $name }}-error"
                 data-required-message="{{ $label }} wajib diisi"
             @endif
-            class="auth-input h-10 w-full rounded-[8px] border border-medcare-border bg-white pl-[58px] pr-3 text-[12px] font-normal text-[#404040] outline-none transition placeholder:font-normal placeholder:text-medcare-muted focus:border-medcare focus:ring-2 focus:ring-medcare/25"
+            class="auth-input h-[41px] w-full rounded-[10px] border border-mediacat-border bg-white pl-[59px] pr-3 text-[12px] font-normal text-[#404040] outline-none transition placeholder:font-normal placeholder:text-mediacat-muted focus:border-mediacat focus:ring-2 focus:ring-mediacat/25"
         >
     </div>
 
